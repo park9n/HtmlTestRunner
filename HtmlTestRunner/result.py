@@ -281,7 +281,8 @@ class _HtmlTestResult(_TextTestResult):
         error_type = ""
         if testCase.outcome != testCase.SKIP and testCase.outcome != testCase.SUCCESS:
             error_type = testCase.err[0].__name__
-            error_message = testCase.err[1]
+#            error_message = testCase.err[1]
+            error_message = testCase.get_error_info()
         else:
             error_message = testCase.err
 
