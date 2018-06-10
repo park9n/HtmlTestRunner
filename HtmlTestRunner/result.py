@@ -344,7 +344,8 @@ class _HtmlTestResult(_TextTestResult):
     def generate_file(self, output, report_name, report):
         """ Generate the report file in the given path. """
         current_dir = os.getcwd()
-        dir_to = os.path.join(current_dir, 'reports', output)
+#        dir_to = os.path.join(current_dir, 'reports', output)
+        dir_to = os.path.join(current_dir, output)
         if not os.path.exists(dir_to):
             os.makedirs(dir_to)
         path_file = os.path.join(dir_to, report_name)
